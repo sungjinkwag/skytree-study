@@ -1515,7 +1515,7 @@
     "link": "https://www.skytreemagazine.com/post/영화-더-콜-호러물은-곰팡이물",
     "title": "영화 <더 콜> - 호러물은 곰팡이물, 암과 곰팡이",
     "categories": [
-      "트럼프","대중문화 디코드"
+      "트럼프","대중문화 디코드","암"
     ],
     "date": "2023-02-20"
   },
@@ -2667,7 +2667,7 @@
     "link": "https://www.skytreemagazine.com/post/혈액암과-신인류-cu-later",
     "title": "혈액암과 신인류 - Cu later",
     "categories": [
-      "곰팡이"
+      "곰팡이","암"
     ],
     "date": "2023-10-11"
   },
@@ -3684,7 +3684,7 @@
     "link": "https://www.skytreemagazine.com/post/암-폭증-암의-본질은-무엇인가",
     "title": "암 폭증 - 암의 본질은 무엇인가",
     "categories": [
-      "곰팡이"
+      "곰팡이","암"
     ],
     "date": "2024-06-10"
   },
@@ -4947,5 +4947,14 @@
       "성경/묵상","WBC"
     ],
     "date": "2025-04-23"
-  }  
+  },
+  {
+    "id": 549,
+    "link": "https://www.skytreemagazine.com/post/tac-멸망의-가증한-것-코로나-백신-테스트",
+    "title": "[TAC] 멸망의 가증한 것, 코로나 백신 테스트",
+    "categories": [
+      "TAC","백신"
+    ],
+    "date": "2025-04-23"
+  }
 ]
