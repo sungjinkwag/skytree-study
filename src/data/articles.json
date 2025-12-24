@@ -6452,5 +6452,23 @@
       "큐레이션 뉴스","헤드라인 디코드","시사/정치"
     ],
     "date": "2025-12-22"
+  },
+  {
+    "id": 696,
+    "link": "https://www.skytreemagazine.com/post/멀티버스와-메타버스의-비밀",
+    "title": "멀티버스와 메타버스의 비밀",
+    "categories": [
+      "대중문화 디코드"
+    ],
+    "date": "2025-12-23"
+  },
+  {
+    "id": 697,
+    "link": "https://www.skytreemagazine.com/post/크리스마스와-트럼프와-곰팡이",
+    "title": "크리스마스와 트럼프와 곰팡이",
+    "categories": [
+      "대중문화 디코드","트럼프"
+    ],
+    "date": "2025-12-24"
   }
 ]
