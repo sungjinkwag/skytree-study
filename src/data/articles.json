@@ -6479,5 +6479,23 @@
       "큐레이션 뉴스","헤드라인 디코드","시사/정치"
     ],
     "date": "2025-12-29"
+  },
+  {
+    "id": 699,
+    "link": "https://www.skytreemagazine.com/post/the-superdeep-지옥에-대해-아무도-몰랐던-사실",
+    "title": "<The SuperDeep> - 지옥에 대해 아무도 몰랐던 사실",
+    "categories": [
+      "대중문화 디코드"
+    ],
+    "date": "2025-12-30"
+  },
+  {
+    "id": 700,
+    "link": "https://www.skytreemagazine.com/post/지옥-같은-세상에서-기쁨으로-맞이하는-2026년",
+    "title": "지옥 같은 세상에서 기쁨으로 맞이하는 2026년",
+    "categories": [
+      "기타"
+    ],
+    "date": "2025-12-31"
   }
 ]
