@@ -6614,5 +6614,23 @@
       "큐레이션 뉴스","헤드라인 디코드","시사/정치"
     ],
     "date": "2026-02-02"
+  },
+  {
+    "id": 714,
+    "link": "https://www.skytreemagazine.com/post/더-뷰티-디코드-2-인셀의-분노",
+    "title": "<더 뷰티> 디코드 2 - 인셀의 분노",
+    "categories": [
+      "대중문화 디코드"
+    ],
+    "date": "2026-02-03"
+  },
+  {
+    "id": 715,
+    "link": "https://www.skytreemagazine.com/post/신은-어떻게-우리에게-오는가",
+    "title": "신은 어떻게 우리에게 오는가",
+    "categories": [
+      "성경/묵상"
+    ],
+    "date": "2026-02-04"
   }
 ]
