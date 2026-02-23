@@ -6674,7 +6674,7 @@
     "link": "https://www.skytreemagazine.com/post/tac-결혼이-미친-짓-결혼은-세상의-전부",
     "title": "[TAC] 결혼이 미친 짓? 결혼은 세상의 전부",
     "categories": [
-      "[TAC]"
+      "TAC"
     ],
     "date": "2026-02-12"
   },
@@ -6683,8 +6683,17 @@
     "link": "https://www.skytreemagazine.com/post/tac-born-again-virginity-거듭나면-숫처녀",
     "title": "[TAC] Born Again Virginity (거듭나면 숫처녀)",
     "categories": [
-      "[TAC]", "성경/묵상"
+      "TAC", "성경/묵상"
     ],
     "date": "2026-02-19"
+  },
+  {
+    "id": 722,
+    "link": "https://www.skytreemagazine.com/post/큐레이션-뉴스-미일전쟁-업데이트-돼지열병확산-주택정책-20만전자-기본소득",
+    "title": "[큐레이션 뉴스] 미일전쟁 업데이트, 돼지열병확산, 주택정책-20만전자-기본소득",
+    "categories": [
+      "큐레이션 뉴스","헤드라인 디코드","시사/정치"
+    ],
+    "date": "2026-02-23"
   }
 ]
