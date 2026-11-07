@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CategoryFilter from '../components/CategoryFilter'
+import MonthFilter from '../components/MonthFilter'
 import SortToggle from '../components/SortToggle'
 import ArticleList from '../components/ArticleList'
 import useReadArticles from '../hooks/useReadArticles'
@@ -7,12 +8,20 @@ import articlesData from '../data/articles.json'
 
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState('전체')
-  const [sortOrder, setSortOrder] = useState('desc')
+  const [selectedMonth, setSelectedMonth] = useState('전체')
+  const [sortOrder, setSortOrder] = useState('read-desc')
   const [searchKeyword, setSearchKeyword] = useState('')
-  const { readArticles, markAsRead, resetAll, resetByCategory } = useReadArticles()
+  const {
+    readArticles,
+    markAsRead,
+    toggleRead,
+    resetAll,
+    resetByCategory
+} = useReadArticles()
   const handleReset = () => {
     resetByCategory(selectedCategory, articlesData)
   }
+  
 
   return (
     <div className="p-4">
@@ -31,6 +40,11 @@ function Home() {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
+      <MonthFilter
+        selectedMonth={selectedMonth}
+        setSelectedMonth={setSelectedMonth}
+        articles={articlesData}
+      />
       <input
         type="text"
         placeholder="제목 검색"
@@ -41,11 +55,13 @@ function Home() {
 
       <SortToggle sortOrder={sortOrder} setSortOrder={setSortOrder} />
       <ArticleList
-        selectedCategory={selectedCategory}
-        sortOrder={sortOrder}
-        searchKeyword={searchKeyword}
-        readArticles={readArticles}
-        markAsRead={markAsRead}
+          selectedCategory={selectedCategory}
+          selectedMonth={selectedMonth}
+          sortOrder={sortOrder}
+          searchKeyword={searchKeyword}
+          readArticles={readArticles}
+          markAsRead={markAsRead}
+          toggleRead={toggleRead}
       />
 
     </div>

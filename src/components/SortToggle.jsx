@@ -3,12 +3,16 @@ import React from 'react'
 function SortToggle({ sortOrder, setSortOrder }) {
     return (
         <div className="mb-4">
-            <button
-                className="px-4 py-1 border rounded text-sm text-gray-700 hover:bg-blue-100"
-                onClick={() => setSortOrder(sortOrder === 'desc' ? 'asc' : 'desc')}
+            <select
+                value={sortOrder}
+                onChange={(e) => setSortOrder(e.target.value)}
+                className="border px-3 py-2 rounded text-sm"
             >
-                {sortOrder === 'desc' ? '오래된순' : '최신순'} 정렬
-            </button>
+                <option value="read-desc">읽은 목록 우선 · 최신순</option>
+                <option value="read-asc">읽은 목록 우선 · 오래된순</option>
+                <option value="unread-desc">안 읽은 목록 우선 · 최신순</option>
+                <option value="unread-asc">안 읽은 목록 우선 · 오래된순</option>
+            </select>
         </div>
     )
 }
