@@ -1,18 +1,60 @@
 import React from 'react'
 
-function SortToggle({ sortOrder, setSortOrder }) {
+function SortToggle({
+    readFilter,
+    setReadFilter,
+    sortOrder,
+    setSortOrder
+}) {
     return (
-        <div className="mb-4">
-            <select
-                value={sortOrder}
-                onChange={(e) => setSortOrder(e.target.value)}
-                className="border px-3 py-2 rounded text-sm"
-            >
-                <option value="read-desc">읽은 목록 우선 · 최신순</option>
-                <option value="read-asc">읽은 목록 우선 · 오래된순</option>
-                <option value="unread-desc">안 읽은 목록 우선 · 최신순</option>
-                <option value="unread-asc">안 읽은 목록 우선 · 오래된순</option>
-            </select>
+        <div className="mb-4 space-y-3">
+
+            {/* 읽음 상태 필터 */}
+            <div className="flex gap-2">
+                {[
+                    { value: 'all', label: '전체' },
+                    { value: 'read', label: '읽음' },
+                    { value: 'unread', label: '안 읽음' }
+                ].map(item => (
+                    <button
+                        key={item.value}
+                        onClick={() => setReadFilter(item.value)}
+                        className={`px-4 py-2 border rounded text-sm ${
+                            readFilter === item.value
+                                ? 'bg-blue-500 text-white border-blue-500'
+                                : 'text-gray-700 hover:bg-blue-100'
+                        }`}
+                    >
+                        {item.label}
+                    </button>
+                ))}
+            </div>
+
+            {/* 날짜 정렬 */}
+            <div className="flex gap-2">
+                <button
+                    onClick={() => setSortOrder('desc')}
+                    className={`px-4 py-2 border rounded text-sm ${
+                        sortOrder === 'desc'
+                            ? 'bg-blue-500 text-white border-blue-500'
+                            : 'text-gray-700 hover:bg-blue-100'
+                    }`}
+                >
+                    최신순
+                </button>
+
+                <button
+                    onClick={() => setSortOrder('asc')}
+                    className={`px-4 py-2 border rounded text-sm ${
+                        sortOrder === 'asc'
+                            ? 'bg-blue-500 text-white border-blue-500'
+                            : 'text-gray-700 hover:bg-blue-100'
+                    }`}
+                >
+                    오래된순
+                </button>
+            </div>
+
         </div>
     )
 }

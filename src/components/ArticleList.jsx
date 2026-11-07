@@ -4,6 +4,7 @@ import articlesData from '../data/articles.json'
 function ArticleList({
     selectedCategory,
     selectedMonth,
+    readFilter,
     sortOrder,
     searchKeyword,
     readArticles,
@@ -20,7 +21,16 @@ function ArticleList({
             selectedMonth === '전체' ||
             article.date.startsWith(selectedMonth)
 
-        return categoryMatch && monthMatch
+        const isRead = readArticles.some(
+            id => String(id) === String(article.id)
+        )
+
+        const readMatch =
+            readFilter === 'all' ||
+            (readFilter === 'read' && isRead) ||
+            (readFilter === 'unread' && !isRead)
+
+        return categoryMatch && monthMatch && readMatch
     })
 
     // 제목 검색
@@ -34,22 +44,10 @@ function ArticleList({
 
     // 읽음 여부 + 날짜 정렬
     filtered.sort((a, b) => {
-        const aRead = readArticles.some(id => String(id) === String(a.id))
-        const bRead = readArticles.some(id => String(id) === String(b.id))
-
-        // 읽음 우선순위
-        if (aRead !== bRead) {
-            const readFirst = sortOrder.startsWith('read-')
-            return readFirst
-                ? (aRead ? -1 : 1)
-                : (aRead ? 1 : -1)
-        }
-
-        // 날짜 정렬
         const dateA = new Date(a.date)
         const dateB = new Date(b.date)
 
-        return sortOrder.endsWith('desc')
+        return sortOrder === 'desc'
             ? dateB - dateA
             : dateA - dateB
     })

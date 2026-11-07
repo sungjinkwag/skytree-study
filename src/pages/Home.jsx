@@ -9,7 +9,8 @@ import articlesData from '../data/articles.json'
 function Home() {
   const [selectedCategory, setSelectedCategory] = useState('전체')
   const [selectedMonth, setSelectedMonth] = useState('전체')
-  const [sortOrder, setSortOrder] = useState('read-desc')
+  const [readFilter, setReadFilter] = useState('all')
+  const [sortOrder, setSortOrder] = useState('desc')
   const [searchKeyword, setSearchKeyword] = useState('')
   const {
     readArticles,
@@ -17,7 +18,7 @@ function Home() {
     toggleRead,
     resetAll,
     resetByCategory
-} = useReadArticles()
+  } = useReadArticles()
   const handleReset = () => {
     resetByCategory(selectedCategory, articlesData)
   }
@@ -53,15 +54,21 @@ function Home() {
         className="w-full border px-3 py-2 rounded mb-4"
       />
 
-      <SortToggle sortOrder={sortOrder} setSortOrder={setSortOrder} />
+      <SortToggle
+        readFilter={readFilter}
+        setReadFilter={setReadFilter}
+        sortOrder={sortOrder}
+        setSortOrder={setSortOrder}
+      />
       <ArticleList
-          selectedCategory={selectedCategory}
-          selectedMonth={selectedMonth}
-          sortOrder={sortOrder}
-          searchKeyword={searchKeyword}
-          readArticles={readArticles}
-          markAsRead={markAsRead}
-          toggleRead={toggleRead}
+        selectedCategory={selectedCategory}
+        selectedMonth={selectedMonth}
+        readFilter={readFilter}
+        sortOrder={sortOrder}
+        searchKeyword={searchKeyword}
+        readArticles={readArticles}
+        markAsRead={markAsRead}
+        toggleRead={toggleRead}
       />
 
     </div>
